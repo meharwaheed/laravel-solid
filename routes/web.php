@@ -1,5 +1,9 @@
 <?php
 
+use App\Solid\OpenClosed\AreaCalculator;
+use App\Solid\OpenClosed\Circle;
+use App\Solid\OpenClosed\Square;
+use App\Solid\OpenClosed\Triangle;
 use App\Solid\SingleResponsibility\HTMLOutput;
 use App\Solid\SingleResponsibility\HTMLPageOutput;
 use App\Solid\SingleResponsibility\JSONOutput;
@@ -40,6 +44,28 @@ Route::get('single', function() {
 
     //  to view output as HTML Blade Page
     return $sales->between($start_date, $end_date, new HTMLPageOutput);
+
+
+});
+
+
+// Open Closed Principle route
+
+Route::get('open', function() {
+
+    $square = new Square(100, 100);
+    $circle = new Circle(58);
+    $trianlge = new Triangle(130,160);
+
+
+    // Now every class is open for extensions and closed for modifications
+    // Now we can calculate area of any shape without modification of AreaCalculator class
+
+
+    $calculator = new AreaCalculator;
+
+    $area = $calculator->calculate([$square, $circle, $trianlge]);
+    return $area;
 
 
 });
