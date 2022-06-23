@@ -1,5 +1,7 @@
 <?php
 
+use App\Solid\LiskovSubstitution\ChildClass;
+use App\Solid\LiskovSubstitution\ParentClass;
 use App\Solid\OpenClosed\AreaCalculator;
 use App\Solid\OpenClosed\Circle;
 use App\Solid\OpenClosed\Square;
@@ -69,3 +71,37 @@ Route::get('open', function() {
 
 
 });
+
+// Liskov Substituion Principle route
+
+Route::get('liskov', function() {
+
+
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Rules when overriding a method within a child class
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// 1. Child method arguments must match parent method arguments
+// 2. Method return type must match parent return types.
+// 3. pre-conditions of child function cannot be greater than pre-conditions of parent function
+// 4. post-conditions of child function cannot be lesser than post-conditions of parent function
+// 5. Any exceptions the child throws must be the same or a child of the same exception thrown in the parent function.
+
+
+    $parent = new ParentClass;
+    $child = new ChildClass;
+    echo doSomeThing($parent) . "<br>";
+    return doSomeThing($child);
+
+
+});
+
+// function doSomeThing(ParentClass $parent) {
+//   return $parent->doSomeThing();
+// }
+
+function doSomeThing($parent) {
+    return $parent->doSomeThing();
+  }
+
+// Liskov Substituion Principle End here
+
