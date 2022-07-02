@@ -24,6 +24,8 @@ SOLID is a popular set of design principles that are used in object-oriented sof
 
 ## Interface Segregation Principle
 
+    A Client should not be forced to implement an interfaced that it doesn't use.
+
     In the field of software engineering, the interface segregation
     principle states that no code should be forced to depend on methods
     it does not use. ISP splits interfaces that are very large into

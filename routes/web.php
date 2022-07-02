@@ -13,7 +13,6 @@ use App\Solid\SingleResponsibility\Repositories\SalesRepository;
 use App\Solid\SingleResponsibility\SalesReporter;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -99,9 +98,27 @@ Route::get('liskov', function() {
 //   return $parent->doSomeThing();
 // }
 
-function doSomeThing($parent) {
-    return $parent->doSomeThing();
-  }
+// function doSomeThing($parent) {
+//     return $parent->doSomeThing();
+//   }
 
 // Liskov Substituion Principle End here
 
+
+//Interface Segregation Principle
+
+
+
+
+
+
+
+ Route::get('inter', function () {
+//     $obj = new \App\Solid\InterfaceSegregation\example();
+//     $obj->beManaged();
+
+      $captain = new \App\Solid\InterfaceSegregation\Capatin();
+      $captain->manage(new \App\Solid\InterfaceSegregation\HumanWorker());
+      $captain->manage(new \App\Solid\InterfaceSegregation\AndroidWorker());
+ });
+//Interface Segregation Principle End
