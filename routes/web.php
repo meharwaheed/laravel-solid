@@ -107,13 +107,7 @@ Route::get('liskov', function() {
 
 //Interface Segregation Principle
 
-
-
-
-
-
-
- Route::get('inter', function () {
+ Route::get('interface', function () {
 //     $obj = new \App\Solid\InterfaceSegregation\example();
 //     $obj->beManaged();
 
@@ -122,3 +116,12 @@ Route::get('liskov', function() {
       $captain->manage(new \App\Solid\InterfaceSegregation\AndroidWorker());
  });
 //Interface Segregation Principle End
+
+//Dependency Inversion Principle
+  Route::get('dependency_inversion', function () {
+     $example = new \App\Solid\DependencyInversion\Example();
+     $example->test();
+  });
+//Dependency Inversion Principle end
+
+

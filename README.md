@@ -33,6 +33,8 @@ SOLID is a popular set of design principles that are used in object-oriented sof
     to know about the methods that are of interest to them.
 
 ## Dependency Inversion Principle
+    Its all about decoupling
+    Heigher lever code should not depend upon low level code
     Entities must depend on abstractions, not on concretions. 
     It states that the high-level module must not depend on the low-level module, 
     but they should depend on abstractions.
