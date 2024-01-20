@@ -26,7 +26,7 @@ SOLID is a popular set of design principles that are used in object-oriented sof
 Certainly! The Liskov Substitution Principle (LSP) can be illustrated through a simple example involving inheritance. 
 <br><br>
 Let's consider a scenario with geometric shapes – a base class <strong> Shape </strong> and two derived classes <strong> Rectangle </strong> and <strong> Square</strong>. According to LSP, instances of the derived classes should be able to substitute instances of the base class without affecting the correctness of the program.
-```
+```php
 <?php
 
 class Shape {
